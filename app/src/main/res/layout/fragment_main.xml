@@ -5,6 +5,10 @@
 
     <data>
         <variable name="viewModel" type="com.wsr.a2_way_databinding.MainViewModel"/>
+
+        <variable
+            name="text"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,12 +20,13 @@
             android:id="@+id/text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text="@={viewModel.text}"
             app:layout_constraintBottom_toBottomOf="@id/edit_view"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/edit_view"
+            android:text="@={viewModel.text}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/text_view"/>

@@ -1,8 +1,8 @@
 package com.wsr.a2_way_databinding
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 
-class MainViewModel(application: Application) : AndroidViewModel(application){
-
+class MainViewModel() : ViewModel(){
+    val text = MutableLiveData<String>()
 }
