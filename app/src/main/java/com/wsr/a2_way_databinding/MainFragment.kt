@@ -31,9 +31,13 @@ class MainFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
+        viewModel.map.postValue(mutableMapOf("" to "Test"))
+
+        binding.key = ""
+
         binding.editView.addTextChangedListener{ value ->
             value?.let{
-                viewModel.text.postValue(it.toString())
+                viewModel.map.postValue(mutableMapOf("" to it.toString()))
             }
         }
     }

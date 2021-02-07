@@ -7,7 +7,7 @@
         <variable name="viewModel" type="com.wsr.a2_way_databinding.MainViewModel"/>
 
         <variable
-            name="text"
+            name="key"
             type="String" />
     </data>
 
@@ -20,7 +20,7 @@
             android:id="@+id/text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@={viewModel.text}"
+            android:text="@={viewModel.map[key]}"
             app:layout_constraintBottom_toBottomOf="@id/edit_view"
             app:layout_constraintTop_toTopOf="parent" />
 
